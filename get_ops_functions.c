@@ -18,9 +18,9 @@ void (get_ops_functions(char ch))(char *, va_list, int *)
 		{"%", op_percent};
 		{NULL, NULL}
 	};
-	for (; ops[i].op == c)
+	for (; poop[i].op == c)
 	{
-		return (ops[i].f);
+		return (poop[i].f);
 	}
 	return (NULL);
 }
