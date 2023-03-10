@@ -7,7 +7,7 @@
   * Return: if ch is NULL return NULL
   *         if ch is == char option return option.
   */
-void *(get_spec_functions(char ch))(char *, va_list, int *)
+void (*get_spec_functions(char ch))(char *, va_list, int *)
 {
 	int i = 0;
 	functions poop[] = {
