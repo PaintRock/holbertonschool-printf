@@ -11,11 +11,10 @@ void (*get_spec_functions(char ch))(char *, va_list, int *)
 {
 	int i = 0;
 	functions poop[] = {
-		{"c", op_char},
-		{"s", op_string},
-		{"d", op_int},
-		{";", op_int},
-		{"%", op_percent},
+		{"c", spec_char},
+		{"s", spec_string},
+		{"d", spec_int},
+		{"i", spec_int},
 		{NULL, NULL}
 	};
 	for (; poop[i].poop != NULL && *(poop[i].poop) != ch; i++)
