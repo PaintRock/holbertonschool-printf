@@ -90,95 +90,12 @@ This project does not include the zero or more _flags_, optional minimum _field 
 _precision_ or optional _length_ modifier. 
 
 
-#### (space)
-  * A blank is left before a positive number or empty string produced by a
-  signed conversion.
-
-Example `main.c`:
-```
-int main(void)
-{
-    _printf("% d\n", 7);
-}
-```
-Output:
-```
- 7
-```
-
-#### +
-  * A sign (`+` or `-`) is always placed before a number produced by signed
-  conversion.
-  * Overrides a space flag.
-
-Example `main.c`:
-```
-int main(void)
-{
-    _printf("%+d\n", 7);
-}
-```
-Output:
-```
-+7
-```
-
-#### 0
-  * For `d`, `i`, `o`, `u`, `x`, and `X` conversions, the converted value is
-  padded on the left with zeroes rather than blanks.
-  * If the `0` flag is provided to a numeric conversion with a specified
-  precision, it is ignored.
-
-Example `main.c`:
-```
-int main(void)
-{
-    _printf("%05d\n", 7);
-}
-```
-Output:
-```
-00007
-```
-
-
-#### h
-Specifies that an integer conversion corresponds to a `short int` or
-`unsigned short int` argument.
-
-Example `main.c`:
-```
-int main(void)
-{
-    _printf("%hd\n", SHRT_MAX);
-}
-```
-Output:
-```
-32767
-```
-
-#### l
-Specifies that an integer conversion corresponds to a `long int` or
-`unsigned long int` argument.
-
-Example `main.c`:
-```
-int main(void)
-{
-    _printf("%ld\n", LONG_MAX);
-}
-```
-Output:
-```
-9223372036854775807
-```
 
 #### Conversion Specifiers
 
 The conversion specifier (introduced by the character `%`) is a character that
 specifies the type of conversion to be applied. The `_printf` function
-supports the following conversion specifiers:
+supports the following conversion specifiers: c,s,i,d,%
 
 #### d, i
 The `int` argument is converted to signed decimal notation.

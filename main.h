@@ -29,4 +29,5 @@ void (*get_spec_functions(char c))(char*, va_list, int*);
 void spec_string(char *buffer, va_list args, int *buf_count);
 void spec_char(char *buffer, va_list args, int *buf_count);
 void spec_int(char *buffer, va_list args, int *buf_count);
+int _putchar(char c);
 #endif
